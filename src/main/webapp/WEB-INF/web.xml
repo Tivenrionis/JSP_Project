@@ -3,5 +3,28 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>AddServlet</servlet-name>
+		<servlet-class>com.tivenstudio.math.AddServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Square</servlet-name>
+		<servlet-class>com.tivenstudio.math.SquareServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>AddServlet</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>Square</servlet-name>
+		<url-pattern>/square</url-pattern>
+	</servlet-mapping>
+
 </web-app>
