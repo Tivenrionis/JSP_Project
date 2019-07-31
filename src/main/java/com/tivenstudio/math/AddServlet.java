@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,9 +20,13 @@ public class AddServlet extends HttpServlet {
 
 		double result = a + b;
 
-		//req.setAttribute("sq", result);
+
+		Cookie cookie = new Cookie("cos",result +"");
+		resp.addCookie(cookie);
 		
-		resp.sendRedirect("square?cos="+result); // URL Rewriting
+		
+		resp.sendRedirect("square");
+		
 
 		//RequestDispatcher rd = req.getRequestDispatcher("square");
 		//rd.forward(req, resp);
